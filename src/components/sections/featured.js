@@ -59,8 +59,12 @@ const StyledProject = styled.div`
     .project-image {
       grid-column: 1 / 8;
 
-      @media (max-width: 768px) {
+      @media (max-width: 768px){
+        height: 100%;
+      }
+      @media (max-width: 600px){
         grid-column: 1 / -1;
+        opacity: 0.25;
       }
     }
   }
@@ -371,17 +375,17 @@ const Featured = () => {
                   </div>
                 </div>
 
-                {/* <div className="project-image">
+                <div className="project-image">
                   <a href={external ? external : github ? github : '#'}>
                     <Img fluid={cover.childImageSharp.fluid} alt={title} className="img" />
                   </a>
-                </div> */}
-                <StyledImgContainer
+                </div>
+                {/* <StyledImgContainer
                   href={external ? external : github ? github : '#'}
                   target="_blank"
                   rel="nofollow noopener noreferrer">
                   <StyledFeaturedImg fluid={cover.childImageSharp.fluid} alt={title} />
-                </StyledImgContainer>
+                </StyledImgContainer> */}
               </StyledProject>
             );
           })}
