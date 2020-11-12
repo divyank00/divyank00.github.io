@@ -17,13 +17,14 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'DivyankLunkad',
-        short_name: 'DivyankLunkad',
+        name: "Divyank's Portfolio",
+        short_name: "Divyank's Portfolio",
         start_url: '/',
         background_color: config.colors.darkNavy,
         theme_color: config.colors.navy,
         display: 'minimal-ui',
         icon: 'src/images/logo.png',
+        pathPrefix: '/gatsby-portfolio-site',
       },
     },
     `gatsby-plugin-offline`,
