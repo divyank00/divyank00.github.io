@@ -10,6 +10,7 @@ module.exports = {
   location: 'Nasik, India',
   email: 'lunkaddivyank@gmail.com',
   phone: '+917020322459',
+  linkedIn: 'https://www.linkedin.com/in/divyank00/',
   socialMedia: [
     {
       name: 'GitHub',

@@ -2,7 +2,8 @@ import React, { useEffect, useRef } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
-import { srConfig } from '@config';
+import { srConfig, linkedIn } from '@config';
+
 import sr from '@utils/sr';
 
 const StyledAboutSection = styled.section`
@@ -46,71 +47,138 @@ const StyledText = styled.div`
     }
   }
 `;
+// const StyledPic = styled.div`
+//   position: relative;
+//   max-width: 300px;
+
+//   @media (max-width: 768px) {
+//     margin: 50px auto 0;
+//     width: 70%;
+//   }
+
+//   .wrapper {
+//     ${({ theme }) => theme.mixins.boxShadow};
+//     display: block;
+//     position: relative;
+//     width: 100%;
+//     border-radius: var(--border-radius);
+//     background-color: var(--green);
+
+//     &:hover,
+//     &:focus {
+//       background: transparent;
+//       outline: 0;
+
+//       &:after {
+//         top: 15px;
+//         left: 15px;
+//       }
+
+//       .img {
+//         filter: none;
+//         mix-blend-mode: normal;
+//       }
+//     }
+
+//     .img {
+//       position: relative;
+//       border-radius: var(--border-radius);
+//       mix-blend-mode: multiply;
+//       filter: grayscale(100%) contrast(1);
+//       transition: var(--transition);
+//     }
+
+//     &:before,
+//     &:after {
+//       content: '';
+//       display: block;
+//       position: absolute;
+//       width: 100%;
+//       height: 100%;
+//       border-radius: var(--border-radius);
+//       transition: var(--transition);
+//     }
+
+//     &:before {
+//       top: 0;
+//       left: 0;
+//       background-color: var(--navy);
+//       mix-blend-mode: screen;
+//     }
+
+//     &:after {
+//       border: 2px solid var(--green);
+//       top: 20px;
+//       left: 20px;
+//       z-index: -1;
+//     }
+//   }
+// `;
+
 const StyledPic = styled.div`
   position: relative;
+  width: 40%;
   max-width: 300px;
-
-  @media (max-width: 768px) {
-    margin: 50px auto 0;
-    width: 70%;
-  }
-
-  .wrapper {
-    ${({ theme }) => theme.mixins.boxShadow};
-    display: block;
-    position: relative;
-    width: 100%;
-    border-radius: var(--border-radius);
-    background-color: var(--green);
-
-    &:hover,
+  margin-left: 60px;
+  // ${media.tablet`margin: 60px auto 0;`};
+  // ${media.phablet`width: 70%;`};
+  a {
     &:focus {
-      background: transparent;
       outline: 0;
-
-      &:after {
-        top: 15px;
-        left: 15px;
-      }
-
-      .img {
-        filter: none;
-        mix-blend-mode: normal;
-      }
     }
+  }
+`;
 
-    .img {
-      position: relative;
-      border-radius: var(--border-radius);
-      mix-blend-mode: multiply;
-      filter: grayscale(100%) contrast(1);
-      transition: var(--transition);
-    }
+const StyledAvatar = styled(Img)`
+  position: relative;
+  mix-blend-mode: multiply;
+  filter: grayscale(100%) contrast(1);
+  // border-radius: ${theme.borderRadius};
+  // transition: ${theme.transition};
+`;
 
-    &:before,
+const StyledAvatarLink = styled.a`
+  // ${mixins.boxShadow};
+  width: 100%;
+  position: relative;
+  // border-radius: ${theme.borderRadius};
+  // background-color: ${colors.lightestSlate};
+  margin-left: -20px;
+  &:hover,
+  &:focus {
+    background: transparent;
     &:after {
-      content: '';
-      display: block;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      border-radius: var(--border-radius);
-      transition: var(--transition);
+      top: 15px;
+      left: 15px;
     }
-
-    &:before {
-      top: 0;
-      left: 0;
-      background-color: var(--navy);
-      mix-blend-mode: screen;
+    ${StyledAvatar} {
+      filter: none;
+      mix-blend-mode: normal;
     }
-
-    &:after {
-      border: 2px solid var(--green);
-      top: 20px;
-      left: 20px;
-      z-index: -1;
-    }
+  }
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    // border-radius: ${theme.borderRadius};
+    // transition: ${theme.transition};
+  }
+  &:before {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    // background-color: ${colors.navy};
+    mix-blend-mode: screen;
+  }
+  &:after {
+    // border: 2px solid ${colors.green};
+    top: 10px;
+    left: 10px;
+    z-index: -1;
   }
 `;
 
@@ -126,6 +194,8 @@ const About = () => {
       }
     }
   `);
+
+  const avatar = 'src/images/me.png'
 
   const revealContainer = useRef(null);
 
@@ -158,9 +228,9 @@ const About = () => {
         </StyledText>
 
         <StyledPic>
-          <div className="wrapper">
-            <Img fluid={data.avatar.childImageSharp.fluid} alt="Avatar" className="img" loading="eager" />
-          </div>
+          <StyledAvatarLink href={linkedIn}>
+            <StyledAvatar fluid={data.avatar.childImageSharp.fluid} alt="Avatar" />
+          </StyledAvatarLink>
         </StyledPic>
       </div>
     </StyledAboutSection>
