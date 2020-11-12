@@ -128,6 +128,10 @@ const StyledProject = styled.div`
       font-family: var(--font-mono);
       font-size: var(--fz-xs);
       white-space: nowrap;
+      @media (max-width: 600px) {
+        color: var(--lightest-slate);
+        margin-right: 10px;
+      };
     }
   }
   .project-links {
@@ -186,6 +190,10 @@ const StyledProject = styled.div`
       }
     }
     .img {
+      width: 100%;
+      max-width: 100%;
+      vertical-align: middle;
+      position: relative;
       border-radius: var(--border-radius);
       mix-blend-mode: multiply;
       filter: grayscale(100%) contrast(1) brightness(90%);
@@ -279,7 +287,9 @@ const Featured = () => {
                 </div>
 
                 <div className="project-image">
-                  <a href={external ? external : github ? github : '#'}>
+                  <a href={external ? external : github ? github : '#'}
+                    target="_blank"
+                    rel="nofollow noopener noreferrer">
                     <Img fluid={cover.childImageSharp.fluid} alt={title} className="img" />
                   </a>
                 </div>
