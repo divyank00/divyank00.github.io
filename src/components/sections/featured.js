@@ -239,7 +239,7 @@ const StyledFeaturedImg = styled(Img)`
   width: 100%;
   max-width: 100%;
   vertical-align: middle;
-  border-radius: ${theme.borderRadius};
+  border-radius: var(--border-radius);
   position: relative;
   mix-blend-mode: multiply;
   filter: grayscale(100%) contrast(1) brightness(90%);
