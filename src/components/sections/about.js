@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
 import { srConfig, linkedIn } from '@config';
+import { media } from '@styles';
 
 import sr from '@utils/sr';
 
@@ -53,6 +54,12 @@ const StyledPic = styled.div`
   width: 40%;
   max-width: 300px;
   margin-left: 60px;
+  @media (max-width: 768px){
+    margin: 60px auto 0;
+  }
+  @media (max-width: 480px){
+    width: 70%;
+  }
   a {
     &:focus {
       outline: 0;

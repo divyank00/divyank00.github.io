@@ -235,6 +235,63 @@ const StyledProject = styled.div`
   }
 `;
 
+const StyledFeaturedImg = styled(Img)`
+  width: 100%;
+  max-width: 100%;
+  vertical-align: middle;
+  border-radius: ${theme.borderRadius};
+  position: relative;
+  mix-blend-mode: multiply;
+  filter: grayscale(100%) contrast(1) brightness(90%);
+  @media (max-width: 768px){
+    object-fit: cover;
+    width: auto;
+    height: 100%;
+    filter: grayscale(100%) contrast(1) brightness(80%);
+  };
+`;
+
+const StyledImgContainer = styled.a`
+  ${({ theme }) => theme.mixins.boxShadow};
+  grid-column: 6 / -1;
+  grid-row: 1 / -1;
+  position: relative;
+  z-index: 1;
+  background-color: var(--green);
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  @media (max-width: 768px){
+    height: 100%;
+  }
+  @media (max-width: 600px){
+    grid-column: 1 / -1;
+    opacity: 0.25;
+  }
+  &:hover,
+  &:focus {
+    background: transparent;
+    &:before,
+    ${StyledFeaturedImg} {
+      background: transparent;
+      filter: none;
+    }
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    transition: var(--transition);
+    background-color: var(--navy);
+    mix-blend-mode: screen;
+  }
+`;
+
 const Featured = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -314,11 +371,17 @@ const Featured = () => {
                   </div>
                 </div>
 
-                <div className="project-image">
+                {/* <div className="project-image">
                   <a href={external ? external : github ? github : '#'}>
                     <Img fluid={cover.childImageSharp.fluid} alt={title} className="img" />
                   </a>
-                </div>
+                </div> */}
+                <StyledImgContainer
+                  href={external ? external : github ? github : '#'}
+                  target="_blank"
+                  rel="nofollow noopener noreferrer">
+                  <StyledFeaturedImg fluid={cover.childImageSharp.fluid} alt={title} />
+                </StyledImgContainer>
               </StyledProject>
             );
           })}
