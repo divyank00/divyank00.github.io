@@ -5,12 +5,15 @@ module.exports = {
   siteKeywords:
     'Divyank Lunkad, Divyank, Lunkad, divyank00, software engineer, android developer',
   siteUrl: 'https://divyank00.github.io',
+  siteImage: 'images/og.png',
   siteLanguage: 'en_US',
   name: 'Divyank Lunkad',
   location: 'Nasik, India',
   email: 'lunkaddivyank@gmail.com',
   phone: '+917020322459',
+  github: 'https://github.com/divyank00',
   linkedIn: 'https://www.linkedin.com/in/divyank00/',
+  twitterHandle: '@divyank_00',
   socialMedia: [
     {
       name: 'GitHub',

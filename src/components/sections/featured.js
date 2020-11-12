@@ -130,7 +130,6 @@ const StyledProject = styled.div`
       white-space: nowrap;
       @media (max-width: 600px) {
         color: var(--lightest-slate);
-        margin-right: 10px;
       };
     }
   }
@@ -156,12 +155,15 @@ const StyledProject = styled.div`
     position: relative;
     z-index: 1;
     @media (max-width: 768px) {
-      grid-column: 1 / -1;
       height: 100%;
+    }
+    @media (max-width: 600px) {
+      grid-column: 1 / -1;
       opacity: 0.25;
     }
     a {
       width: 100%;
+      height: 100%;
       background-color: var(--green);
       border-radius: var(--border-radius);
       vertical-align: middle;
@@ -197,7 +199,7 @@ const StyledProject = styled.div`
       border-radius: var(--border-radius);
       mix-blend-mode: multiply;
       filter: grayscale(100%) contrast(1) brightness(90%);
-      @media (max-width: 768px) {
+      @media (max-width: 600px) {
         object-fit: cover;
         width: auto;
         height: 100%;

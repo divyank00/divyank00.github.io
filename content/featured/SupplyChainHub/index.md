@@ -3,6 +3,7 @@ date: '5'
 title: '$upplyChainHub'
 cover: 'SCH.jpeg'
 github: 'https://github.com/divyank00/SupplyChainHub'
+external: 'https://youtu.be/NeOLXg60ikI'
 tech:
   - Android
   - Solidity
