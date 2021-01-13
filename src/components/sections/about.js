@@ -54,10 +54,10 @@ const StyledPic = styled.div`
   width: 40%;
   max-width: 300px;
   margin-left: 60px;
-  @media (max-width: 768px){
+  @media (max-width: 768px) {
     margin: 60px auto 0;
   }
-  @media (max-width: 480px){
+  @media (max-width: 480px) {
     width: 70%;
   }
   a {
@@ -132,7 +132,7 @@ const About = () => {
     }
   `);
 
-  const avatar = 'src/images/me.png'
+  const avatar = 'src/images/me.png';
 
   const revealContainer = useRef(null);
 
@@ -140,8 +140,19 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['Android Development', 'Flutter Development', 'React Native',  'Problem Solving','Firebase', 'MySQL', 'Git'];
-  
+  const skills = [
+    'Android Development (Java/Kotlin)',
+    'Flutter Development',
+    'React Native',
+    'Problem Solving',
+    'NodeJS',
+    'Express',
+    'Firebase',
+    'MongoDB',
+    'MySQL',
+    'Git',
+  ];
+
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
       <h2 className="numbered-heading">About Me</h2>
@@ -149,11 +160,14 @@ const About = () => {
       <div className="inner">
         <StyledText>
           <div>
-            <p>Hello! I'm Divyank Lunkad, a third-year student with a keen interest in Data Structures and Algorithms.</p>
+            <p>
+              Hello! I'm Divyank Lunkad, a third-year student with keen interest in Data Structures
+              and Algorithms.
+            </p>
 
             <p>
-              I am pursuing my Bachelors from{' '}
-              <a href="https://pict.edu/">PICT, Pune</a> in Computer Science (2018-2022) with Cumulative GPA of 9.34/10.
+              I am pursuing my Bachelors from <a href="https://pict.edu/">PICT, Pune</a> in Computer
+              Science (2018-2022) with Cumulative GPA of 9.34/10.
             </p>
 
             <p>Here are a few technologies I've been working with recently:</p>

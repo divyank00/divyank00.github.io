@@ -6,7 +6,6 @@ github: 'hhttps://github.com/divyank00/SystemStats'
 tech:
   - Android
   - Firebase
-  - JavaScript
   - ElectronJS
 
 showInProjects: true
