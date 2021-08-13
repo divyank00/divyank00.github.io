@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled from 'styled-components';
-import { email } from '@config';
 import { navDelay, loaderDelay } from '@utils';
 
 const StyledHeroSection = styled.section`
@@ -52,13 +51,20 @@ const Hero = () => {
   const three = <h3 className="big-heading">I love exploring new things!</h3>;
   const four = (
     <div>
-      <p>I'm a third-year student at PICT, Pune. I have a keen interest in Data Structures and Algorithms. I also enjoy building mobile applications!</p>
-      
-      <p>Currently looking for opportunities to utilize my skills in collaborative and distributed environment.</p>
+      <p>
+        I'm a final-year student at PICT, Pune. I have a keen interest in Data Structures and
+        Algorithms. I also enjoy building mobile applications!
+      </p>
+
+      <p>
+        Currently looking for opportunities to utilize my skills in collaborative and distributed
+        environment.
+      </p>
     </div>
   );
   const five = (
-    <a href="https://drive.google.com/file/d/1T2EWR2pD0VRIAssR3Q8aX7VxGbZ0c9H6/view?usp=sharing"
+    <a
+      href="https://drive.google.com/file/d/1T2EWR2pD0VRIAssR3Q8aX7VxGbZ0c9H6/view?usp=sharing"
       target="_blank"
       rel="nofollow noopener noreferrer"
       className="email-link">

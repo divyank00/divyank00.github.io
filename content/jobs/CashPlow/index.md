@@ -1,11 +1,10 @@
 ---
-date: '3'
+date: '2'
 title: 'Android Developer Intern'
 company: 'Sustain Hill Private Limited'
 info: 'CashPlow'
 range: 'Aug 2020 - Sept 2020'
 ---
 
-- Worked on the Core Android Application CashPlow which is a Platform in the Agricultural Sector for Farmers and their Traders to ease their workflow
-- Worked as a tester and resolved bugs to stabilize the app
-- Added a few core features to the app like exporting sales history in PDF and Excel Format
+- Worked on the android application which was meant for farmers and their traders to ease their workflow
+- Worked as a tester and resolved bugs to minimize the bugs before the first stable release

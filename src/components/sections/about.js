@@ -3,7 +3,6 @@ import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
 import { srConfig, linkedIn } from '@config';
-import { media } from '@styles';
 
 import sr from '@utils/sr';
 
@@ -132,8 +131,6 @@ const About = () => {
     }
   `);
 
-  const avatar = 'src/images/me.png';
-
   const revealContainer = useRef(null);
 
   useEffect(() => {
@@ -161,16 +158,16 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hello! I'm Divyank Lunkad, a third-year student with keen interest in Data Structures
+              Hello! I'm Divyank Lunkad, a final-year student with keen interest in Data Structures
               and Algorithms.
             </p>
 
             <p>
               I am pursuing my Bachelors from <a href="https://pict.edu/">PICT, Pune</a> in Computer
-              Science (2018-2022) with Cumulative GPA of 9.34/10.
+              Science (2018-2022) with Cumulative GPA of 9.56/10.
             </p>
 
-            <p>Here are a few technologies I've been working with recently:</p>
+            <p>Here are a few skills and technologies I've been working with recently:</p>
           </div>
 
           <ul className="skills-list">
