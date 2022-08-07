@@ -1,0 +1,7 @@
+Steps to deploy:
+1. git push
+2. npm ci (optional)
+3. npm run deploy
+
+Steps to preview:
+1. npm run develop

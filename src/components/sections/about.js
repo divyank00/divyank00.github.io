@@ -158,13 +158,14 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hello! I'm Divyank Lunkad, a final-year student with keen interest in Data Structures
-              and Algorithms.
+              Hello! I'm Divyank Lunkad, currently a graduate student at
+              <a href="https://www.cs.usc.edu/">University of Southern California</a> in Computer
+              Science, with keen interest in Data Structures and Algorithms.
             </p>
 
             <p>
-              I am pursuing my Bachelors from <a href="https://pict.edu/">PICT, Pune</a> in Computer
-              Science (2018-2022) with Cumulative GPA of 9.56/10.
+              I have pursued my Bachelors from <a href="https://pict.edu/">PICT, Pune</a> in
+              Computer Science (2018-2022) with CGPA of 9.43/10.
             </p>
 
             <p>Here are a few skills and technologies I've been working with recently:</p>

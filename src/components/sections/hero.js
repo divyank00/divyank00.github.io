@@ -52,8 +52,8 @@ const Hero = () => {
   const four = (
     <div>
       <p>
-        I'm a final-year student at PICT, Pune. I have a keen interest in Data Structures and
-        Algorithms. I also enjoy building mobile applications!
+        I'm a graduate student at University of Southern California, LA. <br></br>I have a keen
+        interest in Data Structures and Algorithms. I also enjoy building mobile applications!
       </p>
 
       <p>
