@@ -1,8 +1,8 @@
 ---
 date: '6'
-title: 'Android Developer Intern'
+title: 'Software Engineer Intern'
 company: 'Swiggy'
-# info: 'QA Testing'
+info: 'Android Developer'
 range: 'Jan 2022 - July 2022'
 ---
 

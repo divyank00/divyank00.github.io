@@ -147,6 +147,7 @@ const About = () => {
     'Firebase',
     'MongoDB',
     'MySQL',
+    'PostgreSQL',
     'Git',
   ];
 
@@ -160,7 +161,7 @@ const About = () => {
             <p>
               Hello! I'm Divyank Lunkad, currently a graduate student at
               <a href="https://www.cs.usc.edu/">University of Southern California</a> in Computer
-              Science, with keen interest in Data Structures and Algorithms.
+              Science, with a CGPA of 3.95/4 and keen interest in Data Structures and Algorithms.
             </p>
 
             <p>

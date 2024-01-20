@@ -54,7 +54,7 @@ const StyledProject = styled.div`
       @media (max-width: 768px) {
         grid-column: 1 / -1;
       }
-      @media (max-width: 600px){
+      @media (max-width: 600px) {
         grid-column: 1 / -1;
         opacity: 0.25;
       }
@@ -130,7 +130,7 @@ const StyledProject = styled.div`
       white-space: nowrap;
       @media (max-width: 600px) {
         color: var(--lightest-slate);
-      };
+      }
     }
   }
   .project-links {
@@ -289,9 +289,11 @@ const Featured = () => {
                 </div>
 
                 <div className="project-image">
-                  <a href={external ? external : github ? github : '#'}
+                  <a
+                    href={external ? external : github ? github : '#'}
                     target="_blank"
-                    rel="nofollow noopener noreferrer">
+                    rel="nofollow noopener noreferrer"
+                  >
                     <Img fluid={cover.childImageSharp.fluid} alt={title} className="img" />
                   </a>
                 </div>
